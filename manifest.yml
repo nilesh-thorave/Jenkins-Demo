@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: iwb-api-poc
+  host: iwb-api-poc
+  disk_quota: 1024M
+  env:
+      CF_STAGING_TIMEOUT: 30
+      NODE_MODULES_CACHE: false
+      NPM_CONFIG_PRODUCTION: false

@@ -1,0 +1,9 @@
+coverage/*
+jsdoc/*
+node_modules/*
+.DS_Store
+.project
+npm-debug.log
+build/*
+.nyc_output/*
+package-lock.json

@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Mochawesome Report</title><link rel="stylesheet" href="assets/app.css"/></head><body data-raw="{
+  &quot;stats&quot;: {
+    &quot;suites&quot;: 1,
+    &quot;tests&quot;: 2,
+    &quot;passes&quot;: 0,
+    &quot;pending&quot;: 0,
+    &quot;failures&quot;: 2,
+    &quot;start&quot;: &quot;2018-01-11T10:28:58.996Z&quot;,
+    &quot;end&quot;: &quot;2018-01-11T10:28:59.043Z&quot;,
+    &quot;duration&quot;: 47,
+    &quot;testsRegistered&quot;: 2,
+    &quot;passPercent&quot;: 0,
+    &quot;pendingPercent&quot;: 0,
+    &quot;other&quot;: 0,
+    &quot;hasOther&quot;: false,
+    &quot;skipped&quot;: 0,
+    &quot;hasSkipped&quot;: false,
+    &quot;passPercentClass&quot;: &quot;danger&quot;,
+    &quot;pendingPercentClass&quot;: &quot;danger&quot;
+  },
+  &quot;suites&quot;: {
+    &quot;title&quot;: &quot;&quot;,
+    &quot;suites&quot;: [
+      {
+        &quot;title&quot;: &quot;Server Test Cases&quot;,
+        &quot;suites&quot;: [],
+        &quot;tests&quot;: [
+          {
+            &quot;title&quot;: &quot;#Success Case&quot;,
+            &quot;fullTitle&quot;: &quot;Server Test Cases #Success Case&quot;,
+            &quot;timedOut&quot;: false,
+            &quot;duration&quot;: 16,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;var req = {\n    url: testData.URL,\n    method: &#x27;POST&#x27;,\n    body: {\n        \&quot;name\&quot; : \&quot;Shweta\&quot;\n    },\n    json: true\n}\nrequest(req, function (err, res) {\n    console.log(\&quot;\\n\\n\\n************ err- res **************\&quot;);\n    console.log(err);\n    console.log(res.body);\n    assert.isNull(err, &#x27;Expected err to be null, but its not null&#x27;);\n    assert.isNotNull(res, &#x27;Expected non-null response, but got null&#x27;);\n    assert.equal(res.statusCode, 200, &#x27;Expected status 200 but got &#x27; + res.statusCode);\n\t\t\tassert.equal(res.body.message, \&quot;Hiee Shweta!! Welcome to sample server!!\&quot;);\n    done();\n});&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined&quot;,
+              &quot;estack&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined\n    at Request._callback (test\\server-test.js:31:28)\n    at self.callback (node_modules\\request\\request.js:186:22)\n    at Request.init (node_modules\\request\\request.js:274:17)\n    at new Request (node_modules\\request\\request.js:128:8)\n    at request (node_modules\\request\\index.js:53:10)\n    at Context.&lt;anonymous&gt; (test\\server-test.js:28:9)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;11ca6384-eb6e-400d-a3b2-cb049d25e19d&quot;,
+            &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;#Error Case - mandatory field missing&quot;,
+            &quot;fullTitle&quot;: &quot;Server Test Cases #Error Case - mandatory field missing&quot;,
+            &quot;timedOut&quot;: false,
+            &quot;duration&quot;: 15,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;var req = {\n    url: testData.URL,\n    method: &#x27;POST&#x27;,\n    body: {\n\t\t\t\t\&quot;name\&quot;:\&quot;\&quot;\n    },\n    json: true\n}\nrequest(req, function (err, res) {\n    console.log(\&quot;\\n\\n\\n************ err- res **************\&quot;);\n    console.log(err);\n    console.log(res.body);\n    assert.isNotNull(res, &#x27;Expected non-null response, but got null&#x27;);\n    assert.equal(res.statusCode, 400, &#x27;Expected status 400 but got &#x27; + res.statusCode);\n    assert.equal(res.body.error, &#x27;Mandatory field missing&#x27;, &#x27;Expected mandatory field missing error but got &#x27;+res.body);\n    done();\n});&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined&quot;,
+              &quot;estack&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined\n    at Request._callback (test\\server-test.js:52:28)\n    at self.callback (node_modules\\request\\request.js:186:22)\n    at Request.init (node_modules\\request\\request.js:274:17)\n    at new Request (node_modules\\request\\request.js:128:8)\n    at request (node_modules\\request\\index.js:53:10)\n    at Context.&lt;anonymous&gt; (test\\server-test.js:49:9)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;15fbbc18-e757-4e91-ac67-7f0a1dfbe567&quot;,
+            &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          }
+        ],
+        &quot;pending&quot;: [],
+        &quot;root&quot;: false,
+        &quot;_timeout&quot;: 2000,
+        &quot;file&quot;: &quot;\\test\\server-test.js&quot;,
+        &quot;uuid&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+        &quot;beforeHooks&quot;: [
+          {
+            &quot;title&quot;: &quot;\&quot;before all\&quot; hook&quot;,
+            &quot;fullTitle&quot;: &quot;Server Test Cases \&quot;before all\&quot; hook&quot;,
+            &quot;timedOut&quot;: false,
+            &quot;duration&quot;: 0,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: false,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;if (!(testData.URL)) {\n    this.skip();\n}&quot;,
+            &quot;err&quot;: {},
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;3a855b98-ff0d-4394-b86d-e0aac944ec2a&quot;,
+            &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+            &quot;isHook&quot;: true,
+            &quot;skipped&quot;: false
+          }
+        ],
+        &quot;afterHooks&quot;: [
+          {
+            &quot;title&quot;: &quot;\&quot;after all\&quot; hook&quot;,
+            &quot;fullTitle&quot;: &quot;Server Test Cases \&quot;after all\&quot; hook&quot;,
+            &quot;timedOut&quot;: false,
+            &quot;duration&quot;: 0,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: false,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;&quot;,
+            &quot;err&quot;: {},
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;e59b4fc0-a73b-4022-89f6-40e72ab9bf3f&quot;,
+            &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+            &quot;isHook&quot;: true,
+            &quot;skipped&quot;: false
+          }
+        ],
+        &quot;fullFile&quot;: &quot;D:\\TRAINING\\Jenkins\\sample-api\\test\\server-test.js&quot;,
+        &quot;passes&quot;: [],
+        &quot;failures&quot;: [
+          {
+            &quot;title&quot;: &quot;#Success Case&quot;,
+            &quot;fullTitle&quot;: &quot;Server Test Cases #Success Case&quot;,
+            &quot;timedOut&quot;: false,
+            &quot;duration&quot;: 16,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;var req = {\n    url: testData.URL,\n    method: &#x27;POST&#x27;,\n    body: {\n        \&quot;name\&quot; : \&quot;Shweta\&quot;\n    },\n    json: true\n}\nrequest(req, function (err, res) {\n    console.log(\&quot;\\n\\n\\n************ err- res **************\&quot;);\n    console.log(err);\n    console.log(res.body);\n    assert.isNull(err, &#x27;Expected err to be null, but its not null&#x27;);\n    assert.isNotNull(res, &#x27;Expected non-null response, but got null&#x27;);\n    assert.equal(res.statusCode, 200, &#x27;Expected status 200 but got &#x27; + res.statusCode);\n\t\t\tassert.equal(res.body.message, \&quot;Hiee Shweta!! Welcome to sample server!!\&quot;);\n    done();\n});&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined&quot;,
+              &quot;estack&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined\n    at Request._callback (test\\server-test.js:31:28)\n    at self.callback (node_modules\\request\\request.js:186:22)\n    at Request.init (node_modules\\request\\request.js:274:17)\n    at new Request (node_modules\\request\\request.js:128:8)\n    at request (node_modules\\request\\index.js:53:10)\n    at Context.&lt;anonymous&gt; (test\\server-test.js:28:9)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;11ca6384-eb6e-400d-a3b2-cb049d25e19d&quot;,
+            &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          },
+          {
+            &quot;title&quot;: &quot;#Error Case - mandatory field missing&quot;,
+            &quot;fullTitle&quot;: &quot;Server Test Cases #Error Case - mandatory field missing&quot;,
+            &quot;timedOut&quot;: false,
+            &quot;duration&quot;: 15,
+            &quot;state&quot;: &quot;failed&quot;,
+            &quot;pass&quot;: false,
+            &quot;fail&quot;: true,
+            &quot;pending&quot;: false,
+            &quot;code&quot;: &quot;var req = {\n    url: testData.URL,\n    method: &#x27;POST&#x27;,\n    body: {\n\t\t\t\t\&quot;name\&quot;:\&quot;\&quot;\n    },\n    json: true\n}\nrequest(req, function (err, res) {\n    console.log(\&quot;\\n\\n\\n************ err- res **************\&quot;);\n    console.log(err);\n    console.log(res.body);\n    assert.isNotNull(res, &#x27;Expected non-null response, but got null&#x27;);\n    assert.equal(res.statusCode, 400, &#x27;Expected status 400 but got &#x27; + res.statusCode);\n    assert.equal(res.body.error, &#x27;Mandatory field missing&#x27;, &#x27;Expected mandatory field missing error but got &#x27;+res.body);\n    done();\n});&quot;,
+            &quot;err&quot;: {
+              &quot;message&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined&quot;,
+              &quot;estack&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined\n    at Request._callback (test\\server-test.js:52:28)\n    at self.callback (node_modules\\request\\request.js:186:22)\n    at Request.init (node_modules\\request\\request.js:274:17)\n    at new Request (node_modules\\request\\request.js:128:8)\n    at request (node_modules\\request\\index.js:53:10)\n    at Context.&lt;anonymous&gt; (test\\server-test.js:49:9)&quot;
+            },
+            &quot;isRoot&quot;: false,
+            &quot;uuid&quot;: &quot;15fbbc18-e757-4e91-ac67-7f0a1dfbe567&quot;,
+            &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+            &quot;isHook&quot;: false,
+            &quot;skipped&quot;: false
+          }
+        ],
+        &quot;skipped&quot;: [],
+        &quot;hasBeforeHooks&quot;: true,
+        &quot;hasAfterHooks&quot;: true,
+        &quot;hasTests&quot;: true,
+        &quot;hasSuites&quot;: false,
+        &quot;totalTests&quot;: 2,
+        &quot;totalPasses&quot;: 0,
+        &quot;totalFailures&quot;: 2,
+        &quot;totalPending&quot;: 0,
+        &quot;totalSkipped&quot;: 0,
+        &quot;hasPasses&quot;: false,
+        &quot;hasFailures&quot;: true,
+        &quot;hasPending&quot;: false,
+        &quot;hasSkipped&quot;: false,
+        &quot;duration&quot;: 31,
+        &quot;rootEmpty&quot;: false
+      }
+    ],
+    &quot;tests&quot;: [],
+    &quot;pending&quot;: [],
+    &quot;root&quot;: true,
+    &quot;_timeout&quot;: 2000,
+    &quot;uuid&quot;: &quot;e83835b3-65ce-4b71-a821-2cd5b19ff4bb&quot;,
+    &quot;beforeHooks&quot;: [],
+    &quot;afterHooks&quot;: [],
+    &quot;fullFile&quot;: &quot;&quot;,
+    &quot;file&quot;: &quot;&quot;,
+    &quot;passes&quot;: [],
+    &quot;failures&quot;: [],
+    &quot;skipped&quot;: [],
+    &quot;hasBeforeHooks&quot;: false,
+    &quot;hasAfterHooks&quot;: false,
+    &quot;hasTests&quot;: false,
+    &quot;hasSuites&quot;: true,
+    &quot;totalTests&quot;: 0,
+    &quot;totalPasses&quot;: 0,
+    &quot;totalFailures&quot;: 0,
+    &quot;totalPending&quot;: 0,
+    &quot;totalSkipped&quot;: 0,
+    &quot;hasPasses&quot;: false,
+    &quot;hasFailures&quot;: false,
+    &quot;hasPending&quot;: false,
+    &quot;hasSkipped&quot;: false,
+    &quot;duration&quot;: 0,
+    &quot;rootEmpty&quot;: true
+  },
+  &quot;allTests&quot;: [
+    {
+      &quot;title&quot;: &quot;#Success Case&quot;,
+      &quot;fullTitle&quot;: &quot;Server Test Cases #Success Case&quot;,
+      &quot;timedOut&quot;: false,
+      &quot;duration&quot;: 16,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;var req = {\n    url: testData.URL,\n    method: &#x27;POST&#x27;,\n    body: {\n        \&quot;name\&quot; : \&quot;Shweta\&quot;\n    },\n    json: true\n}\nrequest(req, function (err, res) {\n    console.log(\&quot;\\n\\n\\n************ err- res **************\&quot;);\n    console.log(err);\n    console.log(res.body);\n    assert.isNull(err, &#x27;Expected err to be null, but its not null&#x27;);\n    assert.isNotNull(res, &#x27;Expected non-null response, but got null&#x27;);\n    assert.equal(res.statusCode, 200, &#x27;Expected status 200 but got &#x27; + res.statusCode);\n\t\t\tassert.equal(res.body.message, \&quot;Hiee Shweta!! Welcome to sample server!!\&quot;);\n    done();\n});&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined&quot;,
+        &quot;estack&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined\n    at Request._callback (test\\server-test.js:31:28)\n    at self.callback (node_modules\\request\\request.js:186:22)\n    at Request.init (node_modules\\request\\request.js:274:17)\n    at new Request (node_modules\\request\\request.js:128:8)\n    at request (node_modules\\request\\index.js:53:10)\n    at Context.&lt;anonymous&gt; (test\\server-test.js:28:9)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;11ca6384-eb6e-400d-a3b2-cb049d25e19d&quot;,
+      &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;#Error Case - mandatory field missing&quot;,
+      &quot;fullTitle&quot;: &quot;Server Test Cases #Error Case - mandatory field missing&quot;,
+      &quot;timedOut&quot;: false,
+      &quot;duration&quot;: 15,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;var req = {\n    url: testData.URL,\n    method: &#x27;POST&#x27;,\n    body: {\n\t\t\t\t\&quot;name\&quot;:\&quot;\&quot;\n    },\n    json: true\n}\nrequest(req, function (err, res) {\n    console.log(\&quot;\\n\\n\\n************ err- res **************\&quot;);\n    console.log(err);\n    console.log(res.body);\n    assert.isNotNull(res, &#x27;Expected non-null response, but got null&#x27;);\n    assert.equal(res.statusCode, 400, &#x27;Expected status 400 but got &#x27; + res.statusCode);\n    assert.equal(res.body.error, &#x27;Mandatory field missing&#x27;, &#x27;Expected mandatory field missing error but got &#x27;+res.body);\n    done();\n});&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined&quot;,
+        &quot;estack&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined\n    at Request._callback (test\\server-test.js:52:28)\n    at self.callback (node_modules\\request\\request.js:186:22)\n    at Request.init (node_modules\\request\\request.js:274:17)\n    at new Request (node_modules\\request\\request.js:128:8)\n    at request (node_modules\\request\\index.js:53:10)\n    at Context.&lt;anonymous&gt; (test\\server-test.js:49:9)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;15fbbc18-e757-4e91-ac67-7f0a1dfbe567&quot;,
+      &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    }
+  ],
+  &quot;allPending&quot;: [],
+  &quot;allPasses&quot;: [],
+  &quot;allFailures&quot;: [
+    {
+      &quot;title&quot;: &quot;#Success Case&quot;,
+      &quot;fullTitle&quot;: &quot;Server Test Cases #Success Case&quot;,
+      &quot;timedOut&quot;: false,
+      &quot;duration&quot;: 16,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;var req = {\n    url: testData.URL,\n    method: &#x27;POST&#x27;,\n    body: {\n        \&quot;name\&quot; : \&quot;Shweta\&quot;\n    },\n    json: true\n}\nrequest(req, function (err, res) {\n    console.log(\&quot;\\n\\n\\n************ err- res **************\&quot;);\n    console.log(err);\n    console.log(res.body);\n    assert.isNull(err, &#x27;Expected err to be null, but its not null&#x27;);\n    assert.isNotNull(res, &#x27;Expected non-null response, but got null&#x27;);\n    assert.equal(res.statusCode, 200, &#x27;Expected status 200 but got &#x27; + res.statusCode);\n\t\t\tassert.equal(res.body.message, \&quot;Hiee Shweta!! Welcome to sample server!!\&quot;);\n    done();\n});&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined&quot;,
+        &quot;estack&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined\n    at Request._callback (test\\server-test.js:31:28)\n    at self.callback (node_modules\\request\\request.js:186:22)\n    at Request.init (node_modules\\request\\request.js:274:17)\n    at new Request (node_modules\\request\\request.js:128:8)\n    at request (node_modules\\request\\index.js:53:10)\n    at Context.&lt;anonymous&gt; (test\\server-test.js:28:9)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;11ca6384-eb6e-400d-a3b2-cb049d25e19d&quot;,
+      &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    },
+    {
+      &quot;title&quot;: &quot;#Error Case - mandatory field missing&quot;,
+      &quot;fullTitle&quot;: &quot;Server Test Cases #Error Case - mandatory field missing&quot;,
+      &quot;timedOut&quot;: false,
+      &quot;duration&quot;: 15,
+      &quot;state&quot;: &quot;failed&quot;,
+      &quot;pass&quot;: false,
+      &quot;fail&quot;: true,
+      &quot;pending&quot;: false,
+      &quot;code&quot;: &quot;var req = {\n    url: testData.URL,\n    method: &#x27;POST&#x27;,\n    body: {\n\t\t\t\t\&quot;name\&quot;:\&quot;\&quot;\n    },\n    json: true\n}\nrequest(req, function (err, res) {\n    console.log(\&quot;\\n\\n\\n************ err- res **************\&quot;);\n    console.log(err);\n    console.log(res.body);\n    assert.isNotNull(res, &#x27;Expected non-null response, but got null&#x27;);\n    assert.equal(res.statusCode, 400, &#x27;Expected status 400 but got &#x27; + res.statusCode);\n    assert.equal(res.body.error, &#x27;Mandatory field missing&#x27;, &#x27;Expected mandatory field missing error but got &#x27;+res.body);\n    done();\n});&quot;,
+      &quot;err&quot;: {
+        &quot;message&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined&quot;,
+        &quot;estack&quot;: &quot;TypeError: Cannot read property &#x27;body&#x27; of undefined\n    at Request._callback (test\\server-test.js:52:28)\n    at self.callback (node_modules\\request\\request.js:186:22)\n    at Request.init (node_modules\\request\\request.js:274:17)\n    at new Request (node_modules\\request\\request.js:128:8)\n    at request (node_modules\\request\\index.js:53:10)\n    at Context.&lt;anonymous&gt; (test\\server-test.js:49:9)&quot;
+      },
+      &quot;isRoot&quot;: false,
+      &quot;uuid&quot;: &quot;15fbbc18-e757-4e91-ac67-7f0a1dfbe567&quot;,
+      &quot;parentUUID&quot;: &quot;73280fc9-12d3-4cd2-8902-891b2c4765f8&quot;,
+      &quot;isHook&quot;: false,
+      &quot;skipped&quot;: false
+    }
+  ],
+  &quot;copyrightYear&quot;: 2018
+}" data-config="{&quot;reportDir&quot;:&quot;reports&quot;,&quot;reportTitle&quot;:&quot;sample-api&quot;,&quot;reportPageTitle&quot;:&quot;Mochawesome Report&quot;,&quot;inline&quot;:false,&quot;inlineAssets&quot;:false,&quot;charts&quot;:true,&quot;enableCharts&quot;:true,&quot;code&quot;:true,&quot;enableCode&quot;:true,&quot;autoOpen&quot;:false,&quot;overwrite&quot;:true,&quot;timestamp&quot;:false,&quot;ts&quot;:false,&quot;showHooks&quot;:&quot;failed&quot;,&quot;dev&quot;:false,&quot;reportFilename&quot;:&quot;mochawesome&quot;,&quot;saveJson&quot;:true,&quot;jsonFile&quot;:&quot;D:\\TRAINING\\Jenkins\\sample-api\\reports\\mochawesome.json&quot;,&quot;htmlFile&quot;:&quot;D:\\TRAINING\\Jenkins\\sample-api\\reports\\mochawesome.html&quot;}"><div id="report"></div><script src="assets/app.js"></script></body></html>
