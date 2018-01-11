@@ -7,3 +7,4 @@ npm-debug.log
 build/*
 .nyc_output/*
 package-lock.json
+reports/*
