@@ -4,6 +4,7 @@
   "description": "A sample application to demonstrate Mocha Test Cases",
   "main": "index.js",
   "scripts": {
+	"start":"node server.js",
     "test": "mocha test/*.js --reporter mochawesome --reporter-options reportDir=reports"
   },
   "author": "Shweta Joshi",
