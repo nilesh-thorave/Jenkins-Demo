@@ -1,5 +1,5 @@
 #Define image we want to build from
-FROM nodejs:6.0
+FROM node:6.0
 
 #Setup the directory structure for our app
 RUN mkdir -p /usr/src/app
