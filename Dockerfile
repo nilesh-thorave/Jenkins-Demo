@@ -3,7 +3,7 @@ FROM node:latest
 
 #Setup the directory structure for our app
 RUN mkdir -p /app
-WORKDIR /usr/src/app
+WORKDIR /app
 
 #we need to make sure rest of our dependencies are installed ( express, etc)
 COPY package.json /app
@@ -13,7 +13,7 @@ RUN npm install
 COPY . /app
 
 #What port we want to expost
-EXPOSE 3000
+EXPOSE 8080
 
 #Next we need to start our server so we can reach it (i.e. server.js)
 CMD ["npm", "start"]
