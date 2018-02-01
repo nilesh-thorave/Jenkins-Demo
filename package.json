@@ -1,6 +1,6 @@
 {
   "name": "session-demo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A sample application to demonstrate Mocha Test Cases",
   "main": "index.js",
   "scripts": {
